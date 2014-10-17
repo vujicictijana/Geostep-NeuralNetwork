@@ -2,7 +2,7 @@
     (:import  [fi.foyt.foursqare.myapi ReadClues Foursquare]))
 
 
-;;my map def test test test teste testeteteee
+;;my map def test test test teste testeteteee dcfffffffffffffffff
 (def my-map
   {:travel "4d4b7105d754a06377d81259,4d4b7105d754a06375d81259,4d4b7104d754a06370d81259"
    :social "4d4b7105d754a06376d81259,4d4b7105d754a06374d81259,4d4b7105d754a06373d81259"
