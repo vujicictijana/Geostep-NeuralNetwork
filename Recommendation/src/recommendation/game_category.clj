@@ -1,5 +1,7 @@
 (ns recommendation.game-category
-    (:import  [fi.foyt.foursqare.myapi ReadClues Foursquare]))
+  
+  (:import  [fi.foyt.foursqare.myapi ReadClues Foursquare]))
+
 
 
 ;;map for matching geostep categories with foursquare categories

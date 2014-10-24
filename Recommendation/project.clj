@@ -7,8 +7,19 @@
                  [compojure "1.1.6"]
                  [hiccup "1.0.5"]
                  [ring-server "0.3.1"]]
-  :git-dependencies [["https://github.com/vujicictijana/foursqare-my-api.git"]]
-  :plugins [[lein-ring "0.8.10"]]
+  ;:git-dependencies [["https://github.com/vujicictijana/foursqare-my-api.git"]]
+  :plugins [[codox "0.8.10"]]
+  
+            ;[lein-git-deps "0.0.1-SNAPSHOT"]
+  ;:git-dependencies [["https://github.com/vujicictijana/foursqare-my-api.git"]]
+  ;:dev-dependencies [[lein-git-deps "0.0.1-SNAPSHOT"]]
+  ;:extra-classpath-dirs [".lein-git-deps/foursqare-my-api/foursquare-api/src"]
+  
+  ;:git-dependencies [["https://github.com/vujicictijana/foursqare-my-api.git"]]
+ ; :source-paths [".lein-git-deps/foursqare-my-api/foursquare-api/src"]
+
+  :java-source-paths ["src/fi/foyt/foursqare" "src/main"]
+  :resource-paths ["resources/json-20090211.jar" "resources/neuroph-core-2.9.jar"]
   :ring {:handler geostep-clojure.handler/app
          :init geostep-clojure.handler/init
          :destroy geostep-clojure.handler/destroy}
