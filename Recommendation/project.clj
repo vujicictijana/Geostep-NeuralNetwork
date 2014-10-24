@@ -7,6 +7,7 @@
                  [compojure "1.1.6"]
                  [hiccup "1.0.5"]
                  [ring-server "0.3.1"]]
+  ;;add git rep
   :plugins [[lein-ring "0.8.10"]]
   :ring {:handler geostep-clojure.handler/app
          :init geostep-clojure.handler/init

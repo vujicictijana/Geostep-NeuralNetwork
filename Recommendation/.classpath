@@ -22,12 +22,12 @@
 			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="Recomendation/target/native/windows/x86"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="resources/mahout-core-0.9-job.jar"/>
-	<classpathentry kind="lib" path="resources/mahout-core-0.9.jar"/>
-	<classpathentry kind="lib" path="resources/mahout-math-0.9.jar"/>
-	<classpathentry kind="lib" path="resources/slf4j-api-1.7.7.jar"/>
-	<classpathentry kind="lib" path="resources/slf4j-nop-1.7.7.jar"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/foursquare-api"/>
+	<classpathentry kind="lib" path="C:/Users/Tijana/Documents/Master/slf4j-simple-1.7.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Tijana/Documents/Master/slf4j-nop-1.7.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Tijana/Documents/Master/slf4j-api-1.7.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Tijana/Documents/Master/mahout-math-0.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Tijana/Documents/Master/mahout-core-0.9-job.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Tijana/Documents/Master/mahout-core-0.9.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/NeuralNetwork"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
