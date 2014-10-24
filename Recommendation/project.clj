@@ -19,7 +19,8 @@
  ; :source-paths [".lein-git-deps/foursqare-my-api/foursquare-api/src"]
 
   :java-source-paths ["src/fi/foyt/foursqare" "src/main"]
-  :resource-paths ["resources/json-20090211.jar" "resources/neuroph-core-2.9.jar"]
+  :resource-paths ["resources/json-20090211.jar" "resources/neuroph-core-2.9.jar"
+                   "resources/slf4j-api-1.7.7.jar" "resources/slf4j-simple-1.7.7.jar"]
   :ring {:handler geostep-clojure.handler/app
          :init geostep-clojure.handler/init
          :destroy geostep-clojure.handler/destroy}
