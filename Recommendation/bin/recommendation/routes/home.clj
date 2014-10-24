@@ -46,7 +46,8 @@
 
 (defroutes home-routes
   (GET "/home" [user number file] (home user number file))
-  (GET "/neural-network" [game-id] (is-game-relevant  game-id)))
+  ;(GET "/a" [] (clojure.java.io/resource "index.html"))
+  (GET "/neural-network" [game-id] (is-game-relevant game-id)))
 
 
 
