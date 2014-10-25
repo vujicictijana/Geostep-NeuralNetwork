@@ -15,33 +15,39 @@
                          "204558/1" "448981/1" "311014/1" "903046/0" "876092/0" "737221/0" 
                          "969300/0" "630699/0"])
 
-;;creates LazySeq that contains data about each game in training vector (game id, relevant/irrelevant and category of each clue )
 
-(defn get-clues-categories [] 
+(defn get-clues-categories 
+  "Creates LazySeq that contains data about each game in training vector (game id, relevant/irrelevant and category of each clue"
+  [] 
   (map #(conj (recommendation.game-category/get-my-category (first (clojure.string/split % #"/")))
               (second (clojure.string/split % #"/")) 
               (first (clojure.string/split % #"/")))
        games-for-training))
 
-;;counts number of clues in each category and returns data in required  format: 
-;;number of clues in category "bussines",
-;;number of clues in category "social",
-;;number of clues in category "travel",
-;;number of clues in category "irrelevant",
-;;game duration,
-;;1/0 (relevant/irrelevant)
 
-(defn categories-count[] 
+
+(defn categories-count
+  "counts number of clues in each category and returns data in required  format: 
+   -number of clues in category \"bussines\",
+   -number of clues in category \"social\",
+   -number of clues in category \"travel\",
+   -number of clues in category \"irrelevant\",
+   -game duration,
+   -1/0 (relevant/irrelevant)"
+  [] 
   (map #(.returnCategoriesCount (new ReadClues) (into-array String %))
        (get-clues-categories)))
 
-;;creates string that will be written in training file
 
-(defn prepare-for-file[] (apply str (categories-count)))
+(defn prepare-for-file
+  "Creates string that will be written in training file"
+  [] 
+  (apply str (categories-count)))
 
-;;creates file with training dataset
 
-(defn create-file[name] 
+(defn create-file
+  "Creates file with training dataset"
+  [name] 
   (let [writer (new FileWriter name)]
     (.append writer (prepare-for-file))
     (.close writer)))

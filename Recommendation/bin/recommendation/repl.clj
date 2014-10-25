@@ -17,7 +17,7 @@
     (wrap-file-info)))
 
 (defn start-server
-  "used for starting the server in development mode from REPL"
+  "Used for starting the server in development mode from REPL"
   [& [port]]
   (let [port (if port (Integer/parseInt port) 8181)]
     (reset! server
@@ -29,7 +29,9 @@
                     :join true}))
     (println (str "You can view the site at http://localhost:" port))))
 
-(defn stop-server []
+(defn stop-server 
+  "Used to stop the server in development mode from REPL"
+  []
   (.stop @server)
   (reset! server nil))
 

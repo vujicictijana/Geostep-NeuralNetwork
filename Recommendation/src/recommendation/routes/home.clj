@@ -1,7 +1,8 @@
 (ns recommendation.routes.home
   (:require[compojure.core :refer :all]
            [recommendation.views.layout :as layout]
-           [recommendation.neural-network :as neural-network])
+           [recommendation.neural-network :as neural-network]
+           [ring.util.response :as resp])
   (:import [java.io File]
            ;[org.apache.mahout.cf.taste.impl.model.file FileDataModel]
          ;  [org.apache.mahout.cf.taste.impl.neighborhood ThresholdUserNeighborhood]
@@ -28,7 +29,9 @@
 ;       lista))
 ;
 ;
-(defn is-game-relevant [game-id] (neural-network/get-relevant game-id))
+(defn is-game-relevant 
+  [game-id] 
+  (neural-network/get-relevant game-id))
 
 ;(defn prepare-xml[lista] 
 ; (str  "<?xml version=\"1.0\" encoding=\"utf-8\"?><items>" 
@@ -41,12 +44,14 @@
 ;    (recommendation (Integer. user) (Integer. number) file )
 ;    (prepare-xml data-list)))
 
-(defn home [user number file] 
+(defn home 
+  [user number file] 
   "cao")
 
-(defroutes home-routes
+(defroutes home-routes  
+  (GET "/" [] "Welcome to Geostep project home page! </br></br>  <a href=\"/documentation\">Documentation</a></br>")
+  ;(GET "/documentation" [] (resp/resource-response "/resources/index.html"))
   (GET "/home" [user number file] (home user number file))
-  ;(GET "/a" [] (clojure.java.io/resource "index.html"))
   (GET "/neural-network" [game-id] (is-game-relevant game-id)))
 
 
