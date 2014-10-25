@@ -27,6 +27,18 @@ public class ReadClues {
 				+ gameNumber + "&username=petar";
 		// System.out.println(urlXml);
 	}
+	
+	public ReadClues(String gameNumber, String path) {
+		if(path!=null){
+			urlXml = path;
+		}else {
+			urlXml = "http://192.168.10.109:81/ReturnGame.aspx?gameNumber="
+					+ gameNumber + "&username=petar";
+		}
+		
+		
+		// System.out.println(urlXml);
+	}
 
 	public String isPublic() {
 		Node game = doc.getElementsByTagName("game").item(0);

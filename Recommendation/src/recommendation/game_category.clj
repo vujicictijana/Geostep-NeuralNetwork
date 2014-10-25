@@ -30,8 +30,8 @@
 
 (defn get-clues 
   "Returns LazySeq that contains data about all clues in game with given id"
-  [game-id]  
-  (let [read (new ReadClues game-id)
+  [game-id path]  
+  (let [read (new ReadClues game-id path)
         clues (.returnAllClues read)]
     (map #(prepare-clue-data %) clues)))
 
@@ -50,7 +50,7 @@
 
 (defn get-my-category 
   "Returns LazySeq that contains geostep category for each clue in game with given id"
-  [game-id] 
+  [game-id path] 
   (map 
     #(check-category (get-category (first %)(read-string(second %))))   
-    (map #(first %) (get-clues game-id))))
+    (map #(first %) (get-clues game-id path))))

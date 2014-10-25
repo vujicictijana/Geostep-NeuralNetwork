@@ -51,6 +51,7 @@
 (defroutes home-routes  
   (GET "/" [] "Welcome to Geostep project home page! </br></br>  <a href=\"/documentation\">Documentation</a></br>")
   ;(GET "/documentation" [] (resp/resource-response "/resources/index.html"))
+  (GET "/test-xml" [] (resp/resource-response "/resources/ReturnGameTest.xml"))
   (GET "/home" [user number file] (home user number file))
   (GET "/neural-network" [game-id] (is-game-relevant game-id)))
 

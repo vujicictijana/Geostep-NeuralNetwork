@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<game number="142670" name="Treasure hunt for the city of Bar, Montenegro" desc="Some of the best places to visit in the city of Bar, both cultural and entertaining." validFrom="10/8/2014 11:17:40 AM" validTo="10/9/2015 11:17:40 AM" isOutdoors="1" isTimeAttack="0" isPublic="1" duration="366">
+  <clue id="1">
+    <cent lat="42.100476" lng="19.091246" radius="40" />
+    <point lat="42.1006583570572" lng="19.0912690758705" />
+    <riddle>King Nicola s Palace, on the sea-shore, emerged in green with beautiful park on its back.</riddle>
+    <indoorCode>
+    </indoorCode>
+  </clue>
+  <clue id="2">
+    <cent lat="42.106755" lng="19.088997" radius="70" />
+    <point lat="42.1070741587757" lng="19.0890374779701" />
+    <riddle>Popular workout zone, called "Šumice" near the sea.</riddle>
+    <indoorCode>
+    </indoorCode>
+  </clue>
+  <clue id="3">
+    <cent lat="42.101349" lng="19.093548" radius="30" />
+    <point lat="42.1014862389214" lng="19.0935650467873" />
+    <riddle>Temple of a saint Jovan Vladimir, still in construction but still beautiful! </riddle>
+    <indoorCode>
+    </indoorCode>
+  </clue>
+  <clue id="4">
+    <cent lat="42.098939" lng="19.096073" radius="70" />
+    <point lat="42.0987159764083" lng="19.0962472558022" />
+    <riddle>Caffe zone in the city center, take a break before going on the next clue, that is a little bit farther. </riddle>
+    <indoorCode>
+    </indoorCode>
+  </clue>
+  <clue id="5">
+    <cent lat="42.094003" lng="19.135372" radius="70" />
+    <point lat="42.0937801513544" lng="19.1355469822884" />
+    <riddle>Old city of Bar, fortress and museum. Hopefully, you will get free entrance if you show them that you are on a Geostep Quest.</riddle>
+    <indoorCode>
+    </indoorCode>
+  </clue>
+</game>
