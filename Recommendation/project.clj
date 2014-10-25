@@ -6,17 +6,19 @@
   :dependencies [[org.clojure/clojure "1.5.1"]
                  [compojure "1.1.6"]
                  [hiccup "1.0.5"]
-                 [ring-server "0.3.1"]]
-  ;:git-dependencies [["https://github.com/vujicictijana/foursqare-my-api.git"]]
+                 [ring-server "0.3.1"]
+                 [midje "1.6.3"]]
+  
   :plugins [[codox "0.8.10"]]
   
-            ;[lein-git-deps "0.0.1-SNAPSHOT"]
+  ;:git-dependencies [["https://github.com/vujicictijana/foursqare-my-api.git"]]
+  ;[lein-git-deps "0.0.1-SNAPSHOT"]
   ;:git-dependencies [["https://github.com/vujicictijana/foursqare-my-api.git"]]
   ;:dev-dependencies [[lein-git-deps "0.0.1-SNAPSHOT"]]
   ;:extra-classpath-dirs [".lein-git-deps/foursqare-my-api/foursquare-api/src"]
   
   ;:git-dependencies [["https://github.com/vujicictijana/foursqare-my-api.git"]]
- ; :source-paths [".lein-git-deps/foursqare-my-api/foursquare-api/src"]
+  ;:source-paths [".lein-git-deps/foursqare-my-api/foursquare-api/src"]
 
   :java-source-paths ["src/fi/foyt/foursqare" "src/main"]
   :resource-paths ["src/resources/json-20090211.jar" "src/resources/neuroph-core-2.9.jar"
