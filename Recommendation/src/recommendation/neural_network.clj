@@ -7,7 +7,7 @@
   "Returns category for each clue in game with given id,
    using get-my-category function from recommendation.game-category namespace"
   [game-id] 
-  (conj (recommendation.game-category/get-my-category game-id) "" game-id ))
+  (conj (recommendation.game-category/get-my-category game-id nil) "" game-id ))
 
 
 (defn categories-count
