@@ -1,4 +1,4 @@
-(ns Recomendation.core-test
+(ns Recomendation.game-category-test
   (:use midje.sweet
         recommendation.game-category)
    (:import  [fi.foyt.foursqare.myapi ReadClues Foursquare]

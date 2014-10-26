@@ -1,6 +1,6 @@
-(ns Recomendation.core-test
+(ns Recomendation.neural-network-test
   (:use midje.sweet
-        recommendation.training))
+        recommendation.neural-network))
 
 ;;;;;;;;;; get-vector
 

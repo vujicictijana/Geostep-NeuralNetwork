@@ -9,7 +9,8 @@
                  [ring-server "0.3.1"]
                  [midje "1.6.3"]]
   
-  :plugins [[codox "0.8.10"]]
+  :plugins [[codox "0.8.10"]
+            [lein-midje "3.1.1"]]
   
   ;:git-dependencies [["https://github.com/vujicictijana/foursqare-my-api.git"]]
   ;[lein-git-deps "0.0.1-SNAPSHOT"]

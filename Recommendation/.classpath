@@ -22,8 +22,8 @@
 			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="Recomendation/target/native/windows/x86"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Tijana/Documents/Master/json-20090211.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Tijana/Documents/Master/appengine-api-1.0-sdk-1.6.5.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Tijana/Documents/Master/NeuralNetwork/src/resources/neuroph-core-2.9.jar"/>
+	<classpathentry kind="lib" path="D:/Users/Tijana/Downloads/n=master jars/appengine-api-1.0-sdk-1.6.5.jar"/>
+	<classpathentry kind="lib" path="D:/Users/Tijana/Downloads/n=master jars/json-20090211.jar"/>
+	<classpathentry kind="lib" path="D:/Users/Tijana/Downloads/n=master jars/neuroph-core-2.9.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
