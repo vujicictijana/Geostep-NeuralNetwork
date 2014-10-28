@@ -11,34 +11,34 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-
 public class ReadClues {
-	public ReadClues() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+	// public ReadClues() {
+	// super();
+	// TODO Auto-generated constructor stub
+	// }
 
 	Document doc;
 	ArrayList<Clue> clues;
 	public static String urlXml = "";
 
-	public ReadClues(String gameNumber) {
-		urlXml = "http://192.168.10.109:81/ReturnGame.aspx?gameNumber="
-				+ gameNumber + "&username=petar";
+	public ReadClues(String gameNumber, String url) {
+		urlXml = url;
+		// "http://192.168.10.109:81/ReturnGame.aspx?gameNumber="
+		// + gameNumber + "&username=petar";
 		// System.out.println(urlXml);
 	}
-	
-	public ReadClues(String gameNumber, String path) {
-		if(path!=null){
-			urlXml = path;
-		}else {
-			urlXml = "http://192.168.10.109:81/ReturnGame.aspx?gameNumber="
-					+ gameNumber + "&username=petar";
-		}
-		
-		
-		// System.out.println(urlXml);
-	}
+
+	// public ReadClues(String gameNumber, String path) {
+	// if(path!=null){
+	// urlXml = path;
+	// }else {
+	// urlXml = "http://192.168.10.109:81/ReturnGame.aspx?gameNumber="
+	// + gameNumber + "&username=petar";
+	// }
+	//
+	//
+	// // System.out.println(urlXml);
+	// }
 
 	public String isPublic() {
 		Node game = doc.getElementsByTagName("game").item(0);
@@ -60,8 +60,8 @@ public class ReadClues {
 			}
 			switch (s) {
 			case "bussines":
-				
-					categoriesCounts[0] += k;
+
+				categoriesCounts[0] += k;
 				break;
 			case "social":
 				categoriesCounts[1] += k;
@@ -77,9 +77,9 @@ public class ReadClues {
 			}
 		}
 
-		urlXml = "http://192.168.10.109:81/ReturnGame.aspx?gameNumber="
-				+ categories[0] + "&username=petar";
-		readXML();
+		// urlXml = "http://192.168.10.109:81/ReturnGame.aspx?gameNumber="
+		// + categories[0] + "&username=petar";
+		 readXML();
 		return categoriesCounts[0] + "," + categoriesCounts[1] + ","
 				+ categoriesCounts[2] + "," + categoriesCounts[3] + ","
 				+ isPublic() + "," + getDuration() + "," + categories[1] + "\n";

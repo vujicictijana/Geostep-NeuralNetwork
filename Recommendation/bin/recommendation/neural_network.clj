@@ -6,8 +6,8 @@
 (defn get-clues-categories
   "Returns category for each clue in game with given id,
    using get-my-category function from recommendation.game-category namespace"
-  [game-id] 
-  (conj (recommendation.game-category/get-my-category game-id nil) "" game-id ))
+  [game-id path] 
+  (conj (recommendation.game-category/get-my-category game-id path) "" game-id ))
 
 
 (defn categories-count
@@ -17,10 +17,10 @@
    -number of clues in category \"travel\",
    -number of clues in category \"irrelevant\",
    -game duration"
-  [game-id] 
+  [game-id path] 
   (.returnCategoriesCount 
-    (new ReadClues) 
-    (into-array String (get-clues-categories game-id))))
+    (new ReadClues game-id path) 
+    (into-array String (get-clues-categories game-id path))))
 
 
 (defn get-vector
@@ -55,16 +55,16 @@
 
 (defn call-get-result
   "Returns neural network prediction for game with given id"
-  [game-id] 
+  [game-id path] 
   (let [network (new GeostepNeuralNetwrok)]
     (.getResult  
       network 
-      (into-array Double (calculate-categories (categories-count game-id))))))
+      (into-array Double (calculate-categories (categories-count game-id path))))))
 
 
 (defn get-relevant
   "Returns \"relevant\" if prediction is greater than 0.75, otherwise it returns \"irrelevant\""
-  [game-id] 
-  (if (> (call-get-result game-id) 0.75)
+  [game-id path] 
+  (if (> (call-get-result game-id path) 0.75)
     "relevant"
     "irrelevant"))

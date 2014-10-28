@@ -31,7 +31,8 @@
 ;
 (defn is-game-relevant 
   [game-id] 
-  (neural-network/get-relevant game-id))
+  (let [path (str "http://192.168.10.109:81/ReturnGame.aspx?gameNumber=" game-id  "&username=petar")]
+    (neural-network/get-relevant game-id path)))
 
 ;(defn prepare-xml[lista] 
 ; (str  "<?xml version=\"1.0\" encoding=\"utf-8\"?><items>" 
