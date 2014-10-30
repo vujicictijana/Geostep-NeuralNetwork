@@ -7,7 +7,9 @@
                  [compojure "1.1.6"]
                  [hiccup "1.0.5"]
                  [ring-server "0.3.1"]
-                 [midje "1.6.3"]]
+                 [midje "1.6.3"]
+                 [lib-noir "0.8.3"]
+                 [liberator "0.11.0"]]
   
   :plugins [[codox "0.8.10"]
             [lein-midje "3.1.1"]]
