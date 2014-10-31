@@ -1,11 +1,8 @@
 (ns Recomendation.game-category-test
   (:use midje.sweet
         recommendation.game-category)
-   (:import  [fi.foyt.foursqare.myapi ReadClues Foursquare]
-            [main Clue]))
-
-;; game-category test
-
+  (:import [fi.foyt.foursqare.myapi ReadClues Foursquare]
+           [main Clue]))
 
 ;;;;;;;;;; test check-category
 
