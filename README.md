@@ -37,7 +37,7 @@ Namespace recommendation.repl - call start-server function
   <li> Visit home page at http://localhost:8181/ </li>
   </ul>
 
-* Accessing to neural network url (for checking game importance) will cause exception, because it connects to local server. It can be changed in recommendation.routes.home namespace (is-game-relevant function)
+*Accessing to neural network url (for checking game importance) will cause exception, because it connects to local server. It can be changed in recommendation.routes.home namespace (is-game-relevant function)
 
 <b>Documentation:</b> 
 
