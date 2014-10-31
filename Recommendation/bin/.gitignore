@@ -1,16 +1,2 @@
-/recommendation/
-/resources/
-/css/
-/index.html
-/intro.md
-/js/
-/recommendation.game-category.html
-/recommendation.handler.html
-/recommendation.neural-network.html
-/recommendation.repl.html
-/recommendation.routes.home.html
-/recommendation.training.html
-/recommendation.views.layout.html
-/dco.html
-/doc.html
 /Recomendation/
+/recommendation/
