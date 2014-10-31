@@ -37,6 +37,16 @@ Namespace recommendation.repl - call start-server function
   <li> Visit home page at http://localhost:8181/ </li>
   </ul>
 
+<b>Documentation:</b> 
+
+There is link to project API on home page.
+
+<b>Test:</b>
+
+Run midje tests from leiningen commandan line: lein midje
+
+
+
 
 
 
