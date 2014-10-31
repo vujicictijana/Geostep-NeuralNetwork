@@ -43,9 +43,9 @@ There is link to project API on home page.
 
 <b>Test:</b>
 
-Run midje tests from leiningen commandan line: <i>lein midje</i>
-Test files: 
--src/resources/Test.csv (for recommendation)
+Run midje tests from leiningen commandan line: <i>lein midje</i><br/>
+Test files: <br/>
+-src/resources/Test.csv (for recommendation) <br/>
 -src/resources/ReturnGameTest.xml (for neural network)
 
 <b>Libraries that are used in this project:</b>
