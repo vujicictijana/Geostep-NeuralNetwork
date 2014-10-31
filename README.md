@@ -12,3 +12,4 @@ Add following jars to src/resources folder:
 - neuroph-core-2.9.jar
 - slf4j-api-1.7.7.jar
 - slf4j-simple-1.7.7.jar
+- 
