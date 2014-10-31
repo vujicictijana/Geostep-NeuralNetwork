@@ -24,7 +24,7 @@ Namespace recommendation.repl - call start-server function
   <ul type="1">
   <li> Import project </li> 
   <li> Load file <i>recommendation.repl</i> in repl </li> 
-  <li> Call start-server function </li> 
+  <li> Call <i>start-server</i> function </li> 
   <li> Visit home page at http://localhost:8181/ </li>
   </ul>
   
