@@ -12,4 +12,5 @@ Add following jars to src/resources folder:
 - neuroph-core-2.9.jar
 - slf4j-api-1.7.7.jar
 - slf4j-simple-1.7.7.jar
-- 
+
+If you are using Eclipse, add same jars to project build path.
