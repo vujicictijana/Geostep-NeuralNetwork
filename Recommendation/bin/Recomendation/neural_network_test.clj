@@ -1,19 +1,19 @@
 (ns Recomendation.neural-network-test
   (:use midje.sweet
-        recommendation.neural-network))
+        neuralnetwork.neural-network))
 
 
 ;;;;;;;;;; test get-clues-categories
 
 (fact 
   (clojure.string/join (map #(str %) (get-clues-categories  "142670" "http://localhost:8181/test-xml")))
-  => "142670irrelevantirrelevantirrelevantsocialtravel")
+  => "142670traveltravelirrelevantsocialtravel")
 
 ;;;;;;;;;; test categories-count
 
 (fact 
   (categories-count "142670" "http://localhost:8181/test-xml") 
-  => "0,1,2,3,1,366,\n")
+  => "0,1,4,1,1,366,\n")
 
 ;;;;;;;;;; test get-vector
 
@@ -35,11 +35,11 @@
 ;;;;;;;;; test call-get-result
 
 (fact 
-  (call-get-result  "142670" "http://localhost:8181/test-xml") => 0.6135290882015169)
+  (call-get-result  "142670" "http://localhost:8181/test-xml") => 0.9955363239586293)
 
 
 ;;;;;; test get-relevant 
 
 (fact 
-  (get-relevant  "142670" "http://localhost:8181/test-xml") => "irrelevant")
+  (get-relevant  "142670" "http://localhost:8181/test-xml") => "relevant")
 

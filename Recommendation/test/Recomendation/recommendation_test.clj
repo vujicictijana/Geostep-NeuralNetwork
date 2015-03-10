@@ -1,6 +1,6 @@
 (ns Recomendation.recommendation-test
   (:use midje.sweet
-        recommendation.recommendation))
+        neuralnetwork.recommendation))
 
 ;;;;;;;;;; test recommendation
 

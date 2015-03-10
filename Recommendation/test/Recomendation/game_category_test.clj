@@ -1,6 +1,6 @@
 (ns Recomendation.game-category-test
   (:use midje.sweet
-        recommendation.game-category)
+        neuralnetwork.game-category)
   (:import [fi.foyt.foursqare.myapi ReadClues Foursquare]
            [main Clue]))
 

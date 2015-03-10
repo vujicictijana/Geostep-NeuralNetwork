@@ -1,7 +1,7 @@
 (ns Recomendation.repl-test
   (:require [net.cgrand.enlive-html :as html])
   (:use midje.sweet
-        recommendation.repl))
+        neuralnetwork.repl))
 
 ;;; test start-server
 
