@@ -1,4 +1,4 @@
-(ns recommendation.views.layout
+(ns neuralnetwork.views.layout
   (:require [hiccup.page :refer [html5 include-css]]))
 
 (defn common [& body]

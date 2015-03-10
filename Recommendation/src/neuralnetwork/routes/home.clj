@@ -1,4 +1,4 @@
-(ns recommendation.routes.home
+(ns neuralnetwork.routes.home
   (:require[compojure.core :refer :all]
            [recommendation.views.layout :as layout]
            [recommendation.neural-network :as neural-network]
