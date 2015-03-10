@@ -1,5 +1,5 @@
-(ns recommendation.training
-   (:require recommendation.game-category)
+(ns neuralnetwork.training
+   (:require neuralnetwork.game-category)
    (:import [java.io FileWriter]
             [fi.foyt.foursqare.myapi ReadClues]))
 

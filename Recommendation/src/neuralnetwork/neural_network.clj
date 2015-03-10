@@ -1,5 +1,5 @@
-(ns recommendation.neural-network
-  (:require recommendation.game-category)
+(ns neuralnetwork.neural-network
+  (:require neuralnetwork.game-category)
    (:import [fi.foyt.foursqare.myapi ReadClues]
             [main GeostepNeuralNetwrok]))
 

@@ -1,5 +1,5 @@
-(ns recommendation.repl
-  (:use recommendation.handler
+(ns neuralnetwork.repl
+  (:use neuralnetwork.handler
         ring.server.standalone
         [ring.middleware file-info file]))
 

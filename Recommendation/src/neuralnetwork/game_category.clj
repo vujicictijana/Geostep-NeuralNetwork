@@ -1,4 +1,4 @@
-(ns recommendation.game-category
+(ns neuralnetwork.game-category
   (:import  [fi.foyt.foursqare.myapi ReadClues Foursquare]
             [main Clue]))
 

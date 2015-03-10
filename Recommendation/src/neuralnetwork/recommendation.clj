@@ -1,4 +1,4 @@
-(ns recommendation.recommendation
+(ns neuralnetwork.recommendation
   (:import [java.io File]
            [org.apache.mahout.cf.taste.impl.model.file FileDataModel]
            [org.apache.mahout.cf.taste.impl.neighborhood ThresholdUserNeighborhood]
