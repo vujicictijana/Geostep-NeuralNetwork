@@ -2,6 +2,7 @@
   (:import  [fi.foyt.foursqare.myapi ReadClues Foursquare]
             [main Clue]))
 
+;;test
 ;;map for matching geostep categories with foursquare categories
 
 (def my-map
