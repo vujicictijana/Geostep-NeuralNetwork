@@ -5,14 +5,14 @@
 
 (defn get-clues-categories
   "Returns category for each clue in game with given id,
-   using get-my-category function from recommendation.game-category namespace"
+   using get-my-category function from neuralnetwork.game-category namespace"
   [game-id path] 
-  (conj (recommendation.game-category/get-my-category game-id path) "" game-id ))
+  (conj (neuralnetwork.game-category/get-my-category game-id path) "" game-id ))
 
 
 (defn categories-count
   "Returns string that contains data about game with given id in required  format: 
-   -number of clues in category \"bussines\",
+   -number of clues in category \"business\",
    -number of clues in category \"social\",
    -number of clues in category \"travel\",
    -number of clues in category \"irrelevant\",
