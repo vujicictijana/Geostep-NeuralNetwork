@@ -8,7 +8,8 @@
                  [hiccup "1.0.5"]
                  [ring-server "0.3.1"]
                  [midje "1.6.3"]
-                 [enlive "1.1.5"]]
+                 [enlive "1.1.5"]
+                 [criterium "0.4.3"]]
   
   :plugins [[codox "0.8.10"]
             [lein-midje "3.1.1"]]

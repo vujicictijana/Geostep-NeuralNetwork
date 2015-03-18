@@ -15,11 +15,14 @@
                          "204558/1" "448981/1" "311014/1" "903046/0" "876092/0" "737221/0" 
                          "969300/0" "630699/0"])
 
-
 (defn get-clues-categories 
-  "Creates LazySeq that contains data about each game in training vector (game id, relevant/irrelevant and category of each clue"
+  "Creates LazySeq that contains data about each game in training vector 
+   (game id, relevant/irrelevant and category of each clue"
   []
-  (map #(conj (neuralnetwork.game-category/get-my-category (first (clojure.string/split % #"/")) (str "http://192.168.10.109:81/ReturnGame.aspx?gameNumber=" (first (clojure.string/split % #"/"))  "&username=petar"))
+  (map #(conj (neuralnetwork.game-category/get-my-category 
+                (first (clojure.string/split % #"/")) 
+                (str "http://192.168.10.109:81/ReturnGame.aspx?gameNumber=" 
+                     (first (clojure.string/split % #"/"))  "&username=petar"))
               (second (clojure.string/split % #"/")) 
               (first (clojure.string/split % #"/")))
        games-for-training))
@@ -35,7 +38,12 @@
    -game duration,
    -1/0 (relevant/irrelevant)"
   [] 
-  (map #(.returnCategoriesCount (new ReadClues (first %) (str "http://192.168.10.109:81/ReturnGame.aspx?gameNumber=" (first %) (into-array String %))))
+  (map #(.returnCategoriesCount 
+          (new ReadClues 
+               (first %) 
+               (str "http://192.168.10.109:81/ReturnGame.aspx?gameNumber=" 
+                    (first %) 
+                    (into-array String %))))
        (get-clues-categories)))
 
 
