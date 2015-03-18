@@ -25,7 +25,7 @@ public class Main {
 //		GeostepNeuralNetwrok geostepNeuralNetwrok = new GeostepNeuralNetwrok();
 //		geostepNeuralNetwrok.start();
 	//	System.out.println(
-		GeostepNeuralNetwrok g  = new GeostepNeuralNetwrok();
+		GeostepNeuralNetwork g  = new GeostepNeuralNetwork();
 		
 		g.getResult(new Double[]{0.0,0.166666667,0.166666667,0.666666667,1.0,0.095238095});
 		
