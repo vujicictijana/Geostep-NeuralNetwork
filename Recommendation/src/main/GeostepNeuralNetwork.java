@@ -1,10 +1,5 @@
 package main;
-
-import java.util.Arrays;
-
 import org.neuroph.core.NeuralNetwork;
-import org.neuroph.core.data.DataSet;
-import org.neuroph.core.data.DataSetRow;
 
 public class GeostepNeuralNetwork {
 
