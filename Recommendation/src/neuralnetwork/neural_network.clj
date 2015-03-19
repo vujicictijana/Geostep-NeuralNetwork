@@ -1,7 +1,7 @@
 (ns neuralnetwork.neural-network
   (:require neuralnetwork.game-category)
    (:import [fi.foyt.foursqare.myapi ReadClues]
-            [main GeostepNeuralNetwrok]))
+            [org.neuroph.core NeuralNetwork ]))
 
 (defn get-clues-categories
   "Returns category for each clue in game with given id,
@@ -56,10 +56,16 @@
 (defn call-get-result
   "Returns neural network prediction for game with given id"
   [game-id path] 
-  (let [network (new GeostepNeuralNetwrok)]
-    (.getResult  
-      network 
-      (into-array Double (calculate-categories (categories-count game-id path))))))
+  (let [network (. NeuralNetwork (createFromFile "src/resources/Geostep.nnet"))]
+    (do 
+      (.setInput 
+        network
+        (double-array (calculate-categories (categories-count game-id path))))
+      (.calculate network)
+      (first (.getOutput network)))))
+    ;(.getResult  
+     ; network 
+      ;(into-array Double (calculate-categories (categories-count game-id path))))))
 
 
 (defn get-relevant
