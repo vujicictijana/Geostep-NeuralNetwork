@@ -17,7 +17,7 @@
 
 (defn get-clues-categories 
   "Creates LazySeq that contains data about each game in training vector 
-   (game id, relevant/irrelevant and category of each clue"
+   (game id, relevant/irrelevant and category of each clue "
   []
   (map #(conj (neuralnetwork.game-category/get-my-categories 
                 (first (clojure.string/split % #"/")) 
