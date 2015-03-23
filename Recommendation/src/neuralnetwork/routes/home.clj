@@ -1,8 +1,8 @@
 (ns neuralnetwork.routes.home
   (:require[compojure.core :refer :all]
-           [recommendation.views.layout :as layout]
-           [recommendation.neural-network :as neural-network]
-           [recommendation.recommendation :as recommendation]
+           [neuralnetwork.views.layout :as layout]
+           [neuralnetwork.neural-network :as neural-network]
+           [neuralnetwork.recommendation :as recommendation]
            [ring.util.response :as resp])
   (:import [java.io File]))
 
@@ -16,7 +16,7 @@
 (defn home 
   [user number file] 
   (do  (recommendation/recommendation (Integer. user) (Integer. number) file )
-    (recommendation/prepare-xml recommendation.recommendation/data-list)))
+    (recommendation/prepare-xml neuralnetwork.recommendation/data-list)))
 
 
 (defroutes home-routes  
