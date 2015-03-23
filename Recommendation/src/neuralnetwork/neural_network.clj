@@ -3,6 +3,7 @@
    (:import [fi.foyt.foursqare.myapi ReadClues]
             [org.neuroph.core NeuralNetwork ]))
 
+
 (defn get-clues-categories
   "Returns category for each clue in game with given id,
    using get-my-categories function from neuralnetwork.game-category namespace"
@@ -10,12 +11,13 @@
   (conj (neuralnetwork.game-category/get-my-categories game-id path) "" game-id ))
 
 
-(defn categories-count
+(defn game-data
   "Returns string that contains data about game with given id in required  format: 
    -number of clues in category \"business\",
    -number of clues in category \"social\",
    -number of clues in category \"travel\",
    -number of clues in category \"irrelevant\",
+   -public/private
    -game duration"
   [game-id path] 
   (.returnCategoriesCount 
@@ -42,7 +44,7 @@
      (conj (vec s) x y))
 
 
-(defn calculate-categories 
+(defn calculate-input-data
   "Returns vector of normalized data that will be given to neural network"
   [text] 
   (let [sum (sum-categories text)
@@ -53,24 +55,21 @@
       (double (/ (read-string (peek  vector)) 1500)))))
 
 
-(defn call-get-result
+(defn get-result
   "Returns neural network prediction for game with given id"
   [game-id path] 
   (let [network (. NeuralNetwork (createFromFile "src/resources/Geostep.nnet"))]
     (do 
       (.setInput 
         network
-        (double-array (calculate-categories (categories-count game-id path))))
+        (double-array (calculate-input-data(game-data game-id path))))
       (.calculate network)
       (first (.getOutput network)))))
-    ;(.getResult  
-     ; network 
-      ;(into-array Double (calculate-categories (categories-count game-id path))))))
 
 
 (defn get-relevant
   "Returns \"relevant\" if prediction is greater than 0.75, otherwise it returns \"irrelevant\""
   [game-id path] 
-  (if (> (call-get-result game-id path) 0.75)
+  (if (> (get-result game-id path) 0.75)
     "relevant"
     "irrelevant"))
