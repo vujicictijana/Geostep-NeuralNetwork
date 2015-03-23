@@ -49,7 +49,7 @@
         (.getMainCatID foursquare (.getId (first (.getCategories venue))))))))
 
 
-(defn get-my-category 
+(defn get-my-categories
   "Returns LazySeq that contains geostep category for each clue in game with given id"
   [game-id path] 
   (map 
