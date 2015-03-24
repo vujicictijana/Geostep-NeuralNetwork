@@ -60,7 +60,7 @@
 (fact (get-category "42.0937801513544,19.1355469822884" 100) => "4d4b7104d754a06370d81259"
       (get-category "56.000000000000,19.0000000000" 40) => "000000000000000000000000")
 
-;;;;; get-my-category 
+;;;;; get-my-categories 
 
-(fact (println (map #(str %) (get-my-category "142670" "http://localhost:8181/test-xml"))) =>                
+(fact (println (map #(str %) (get-my-categories "142670" "http://localhost:8181/test-xml"))) =>                
       (println (str "(\"travel\" \"irrelevant\" \"irrelevant\" \"social\" \"travel\")")))

@@ -25,5 +25,7 @@
 	<classpathentry kind="lib" path="D:/Users/Tijana/Downloads/master jars/appengine-api-1.0-sdk-1.6.5.jar"/>
 	<classpathentry kind="lib" path="D:/Users/Tijana/Downloads/master jars/json-20090211.jar"/>
 	<classpathentry kind="lib" path="D:/Users/Tijana/Downloads/master jars/neuroph-core-2.9.jar"/>
+	<classpathentry kind="lib" path="D:/Users/Tijana/Downloads/master jars/slf4j-api-1.7.7.jar"/>
+	<classpathentry kind="lib" path="D:/Users/Tijana/Downloads/master jars/slf4j-simple-1.7.7.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -8,6 +8,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
@@ -35,23 +36,21 @@ public class ReadClues {
 		}
 	}
 
-	private ArrayList<Clue> returnAllClues() {
+	public ArrayList<Clue> returnAllClues() {
 		readXML();
 		ArrayList<Clue> cluesList = new ArrayList<Clue>();
-		NodeList clues = doc.getElementsByTagName("game").item(0)
-				.getChildNodes();
+		Element game = (Element) doc.getElementsByTagName("game").item(0);
+		NodeList clues = game.getElementsByTagName("clue");
 		for (int i = 0; i < clues.getLength(); i++) {
-			if (i % 2 != 0) {
-				Node clue = clues.item(i);
-				String radius = clue.getChildNodes().item(1).getAttributes()
-						.item(2).getTextContent();
-				String lat = clue.getChildNodes().item(3).getAttributes()
-						.item(0).getTextContent();
-				String lng = clue.getChildNodes().item(3).getAttributes()
-						.item(1).getTextContent();
+			Node clue = clues.item(i);
+			String radius = clue.getChildNodes().item(1).getAttributes()
+					.item(2).getTextContent();
+			String lat = clue.getChildNodes().item(3).getAttributes().item(0)
+					.getTextContent();
+			String lng = clue.getChildNodes().item(3).getAttributes().item(1)
+					.getTextContent();
 
-				cluesList.add(new Clue(lat, lng, radius));
-			}
+			cluesList.add(new Clue(lat, lng, radius));
 		}
 		return cluesList;
 	}

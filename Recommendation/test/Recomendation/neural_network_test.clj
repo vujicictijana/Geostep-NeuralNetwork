@@ -9,10 +9,10 @@
   (clojure.string/join (map #(str %) (get-clues-categories  "142670" "http://localhost:8181/test-xml")))
   => "142670traveltravelirrelevantsocialtravel")
 
-;;;;;;;;;; test categories-count
+;;;;;;;;;; test game-data
 
 (fact 
-  (categories-count "142670" "http://localhost:8181/test-xml") 
+  (game-data "142670" "http://localhost:8181/test-xml") 
   => "0,1,4,1,1,366,\n")
 
 ;;;;;;;;;; test get-vector
@@ -26,16 +26,16 @@
 
 (fact (sum-categories "1,3,4,0,1,366") =>  8)
 
-;;;;;;;;;; test calculate-categories
+;;;;;;;;;; test calculate-input-data
 
-(fact  (calculate-categories "1,3,4,0,1,366") => [0.125 0.375 0.5 0.0 1.0 0.244]
-       (calculate-categories "5,0,0,0,1,600") => [1.0 0.0 0.0 0.0 1.0 0.4])
+(fact  (calculate-input-data "1,3,4,0,1,366") => [0.125 0.375 0.5 0.0 1.0 0.244]
+       (calculate-input-data "5,0,0,0,1,600") => [1.0 0.0 0.0 0.0 1.0 0.4])
 
 
-;;;;;;;;; test call-get-result
+;;;;;;;;; test get-result
 
 (fact 
-  (call-get-result  "142670" "http://localhost:8181/test-xml") => 0.9955363239586293)
+  (get-result "142670" "http://localhost:8181/test-xml") => 0.9955363239586293)
 
 
 ;;;;;; test get-relevant 
