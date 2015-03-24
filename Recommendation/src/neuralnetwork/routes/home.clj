@@ -12,8 +12,11 @@
   (let [path (str "http://192.168.10.109:81/ReturnGame.aspx?gameNumber=" game-id  "&username=petar")]
     (neural-network/get-relevant game-id path)))
 
+(defn build-xml[game-id] 
+  (str "<?xml version=\"1.0\" encoding=\"utf-8\"?> <relevant>" (is-game-relevant game-id) "</relevant>"))
 
-(defn home 
+
+(defn recommendation 
   [user number file] 
   (do  (recommendation/recommendation (Integer. user) (Integer. number) file )
     (recommendation/prepare-xml neuralnetwork.recommendation/data-list)))
@@ -21,8 +24,8 @@
 
 (defroutes home-routes  
   (GET "/test-xml" [] (resp/resource-response "/resources/ReturnGameTest.xml"))
-  (GET "/home" [user number file] (home user number file))
-  (GET "/neural-network" [game-id] (is-game-relevant game-id)))
+  (GET "/home" [user number file] (recommendation user number file))
+  (GET "/neural-network" [game-id] (build-xml game-id)))
   ;;(GET "/documentation" [] (resp/resource-response "../resources/index.html")))
 
 
