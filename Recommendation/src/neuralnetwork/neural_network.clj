@@ -66,6 +66,16 @@
       (.calculate network)
       (first (.getOutput network)))))
 
+(defn get-result-without-foursquare
+     "Returns neural network prediction for specific input - for testing purposes"
+     [txt] 
+     (let [network (. NeuralNetwork (createFromFile "src/resources/Geostep.nnet"))]
+       (do 
+         (.setInput 
+           network
+           (double-array (calculate-input-data txt)))
+         (.calculate network)
+         (first (.getOutput network)))))
 
 (defn get-relevant
   "Returns \"relevant\" if prediction is greater than 0.75, otherwise it returns \"irrelevant\""
