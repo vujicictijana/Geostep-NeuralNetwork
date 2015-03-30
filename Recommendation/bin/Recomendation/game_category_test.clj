@@ -4,7 +4,7 @@
   (:import [fi.foyt.foursqare.myapi ReadClues Foursquare]
            [main Clue]))
 
-;;;;;;;;;; test check-category
+;;;;;;;;; test check-category
 
 ;; 3 travel catgories: 
 ;; Outdoors & Recreation - 4d4b7105d754a06377d81259 
