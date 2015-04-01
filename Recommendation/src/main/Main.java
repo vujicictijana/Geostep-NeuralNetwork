@@ -10,11 +10,17 @@ public class Main {
 //		for (Clue clue : a) {
 //			System.out.println(clue.getLat());
 //		}
-
 		GeostepNeuralNetwork g = new GeostepNeuralNetwork();
 
-		g.getResult(new Double[] { 0.0, 0.166666667, 0.166666667, 0.666666667,
-				1.0, 0.095238095 });
+		double[] input = {0.0,1.0,4.0,1.0,1.0,366.0};
+		
+		long startTime = System.nanoTime();
+		g.getResultTest(input);
+		long endTime = System.nanoTime();
+		long duration = (endTime - startTime);
+		System.out.println("\nTrajanje:" + (duration/1000.00) + " microseconds");
+		
+	
 
 	}
 
