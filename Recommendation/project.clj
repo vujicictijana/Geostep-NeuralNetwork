@@ -28,6 +28,7 @@
                    "src/resources/slf4j-api-1.7.7.jar" "src/resources/slf4j-simple-1.7.7.jar"
                    "src/resources/mahout-core-0.9.jar" "src/resources/mahout-core-0.9-job.jar"
                    "src/resources/mahout-math-0.9.jar"]
+  
   :ring {:handler geostep-clojure.handler/app
          :init geostep-clojure.handler/init
          :destroy geostep-clojure.handler/destroy}

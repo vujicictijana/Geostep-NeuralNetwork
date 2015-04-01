@@ -7,13 +7,13 @@
 
 (fact 
   (clojure.string/join (map #(str %) (get-clues-categories  "142670" "http://localhost:8181/test-xml")))
-  => "142670traveltravelirrelevantsocialtravel")
+  => "142670traveltravelirrelevantsocialirrelevant")
 
 ;;;;;;;;;; test game-data
 
 (fact 
   (game-data "142670" "http://localhost:8181/test-xml") 
-  => "0,1,4,1,1,366,\n")
+  => "0,1,2,3,1,366,\n")
 
 ;;;;;;;;;; test get-vector
 
@@ -35,11 +35,11 @@
 ;;;;;;;;; test get-result
 
 (fact 
-  (get-result "142670" "http://localhost:8181/test-xml") => 0.9955363239586293)
+  (get-result "142670" "http://localhost:8181/test-xml") => 0.6135290882015169)
 
 
 ;;;;;; test get-relevant 
 
 (fact 
-  (get-relevant  "142670" "http://localhost:8181/test-xml") => "relevant")
+  (get-relevant  "142670" "http://localhost:8181/test-xml") => "irrelevant")
 

@@ -13,33 +13,13 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 public class ReadClues {
-	// public ReadClues() {
-	// super();
-	// TODO Auto-generated constructor stub
-	// }
-
 	Document doc;
 	ArrayList<Clue> clues;
 	public static String urlXml = "";
 
 	public ReadClues(String gameNumber, String url) {
 		urlXml = url;
-		// "http://192.168.10.109:81/ReturnGame.aspx?gameNumber="
-		// + gameNumber + "&username=petar";
-		// System.out.println(urlXml);
 	}
-
-	// public ReadClues(String gameNumber, String path) {
-	// if(path!=null){
-	// urlXml = path;
-	// }else {
-	// urlXml = "http://192.168.10.109:81/ReturnGame.aspx?gameNumber="
-	// + gameNumber + "&username=petar";
-	// }
-	//
-	//
-	// // System.out.println(urlXml);
-	// }
 
 	public String isPublic() {
 		Node game = doc.getElementsByTagName("game").item(0);
